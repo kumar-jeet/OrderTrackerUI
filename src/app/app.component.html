@@ -1,0 +1,10 @@
+<mat-toolbar color="primary" style="margin-bottom:50px ;">
+    <mat-toolbar-row>
+      <span [routerLink]="['/dashboard']" style="cursor:pointer">Order Tracker</span>
+      <span class="example-spacer"></span>
+      <button *ngIf="loggedIn=='true'"(click)="logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        Logout
+      </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

@@ -1,0 +1,35 @@
+<div style="margin-left:44%;">
+    <div class="container">
+        <form [formGroup]="uploadForm" (ngSubmit)="submitForm()">
+            <div class="form-group input-group-lg">
+                <input class="form-control" type="number" placeholder="PO Number" formControlName="poNumber">
+            </div>
+            <br>
+            <div class="form-group input-group-lg">
+                <input class="form-control" placeholder="PO Type" formControlName="poType">
+            </div>
+            <br>
+            <div class="form-group input-group-lg">
+                <input class="form-control" placeholder="PO Name" formControlName="poName">
+            </div>
+            <br>
+            <div class="form-group input-group-lg">
+                <input class="form-control" type="number" placeholder="Container Id" formControlName="containerId">
+            </div>
+            <br>
+            <div class="form-group input-group-lg">
+                <label for="start">Expected Delivery Date</label><br>
+                <input class="form-control" type="date" placeholder="Expected Delivery Date" formControlName="expDelDate">
+            </div>
+            <br>
+            <div class="form-group input-group-lg">
+                <input class="form-control" type="number" placeholder="Price" formControlName="price">
+            </div>
+          
+            <br>
+            <div class="form-group">
+                <button mat-raised-button class="button" color="primary" style="margin-left:45px ;">Add</button>
+            </div>
+        </form>
+    </div>
+</div>

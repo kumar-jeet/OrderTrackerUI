@@ -1,0 +1,13 @@
+
+<h3 style="margin-left:39%">Click on order's names for the details.</h3>
+ <div *ngIf="dataLoaded">
+    <mat-selection-list #shoes [multiple]="false" *ngIf="orderEmpty">
+        <div style="margin-left:46% ;" *ngFor="let ord of order"  [routerLink]="['/details',ord.id]">
+          <h2 style="cursor:pointer ;">{{ord.poName}}</h2>
+        </div>
+      </mat-selection-list>
+      <div *ngIf="!orderEmpty">
+        <div style="margin-left:43% ;">Order not available.</div>
+        </div>
+ </div> <button mat-raised-button class="button" color="primary" style="float:right ;margin-right:100px ;" [routerLink]="['/order']">Add Order</button>
+
